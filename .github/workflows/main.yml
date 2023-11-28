@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: pushpendras21/test-nodeapp-ci:latest
+          tags: pushpendras21/test-nodeapp-ci:v1.0.5
