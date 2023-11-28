@@ -16,6 +16,7 @@ jobs:
       - run: npm version minor -m "v%s"
       - run: VERSION=$(node -p "require('./package.json').version")
       - run: git tag ${VERSION}
+        run: echo "GITHUB_ACTOR=$GITHUB_ACTOR | GITHUB_REPOSITORY=$GITHUB_REPOSITORY.git "
       - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" --follow-tags
       - run: git push "https://$GITHUB_ACTOR:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" --tags
           
