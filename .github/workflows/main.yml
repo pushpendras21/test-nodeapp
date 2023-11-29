@@ -33,4 +33,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: pushpendras21/test-nodeapp:$(node -p "require('./package.json').version")
+          tags: pushpendras21/test-nodeapp:v1.0.7
+            #$(node -p "require('./package.json').version")
